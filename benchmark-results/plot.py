@@ -26,7 +26,7 @@ def process_comm(raw):
 
 
 def process_time(raw):
-    if raw == "timeout":
+    if raw in ["timeout", "error"]:
         return None
     if raw.endswith("ms"):
         return float(raw[:-2])
