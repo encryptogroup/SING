@@ -45,7 +45,7 @@ parser.add_argument(
     "--checkpoint",
     type=str,
     default="checkpoint.pt",
-    help="Path to model checkpoint",
+    help="Benchmark mode: Path to model checkpoint",
 )
 parser.add_argument(
     "--dataset-dir",
@@ -103,7 +103,7 @@ parser.add_argument(
 parser.add_argument(
     "--output-csv",
     type=str,
-    help="Output CSV file path. Defaults to {RUN_UUID}_{NETWORK_SETTING}.csv",
+    help="Benchmark mode: Output CSV file path. Defaults to {RUN_UUID}_{NETWORK_SETTING}.csv",
 )
 parser.add_argument(
     "--dry-run",
