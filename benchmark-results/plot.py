@@ -76,8 +76,10 @@ def plot_share_assignment(csv_file):
                 values="runtime", index="name", columns="mode"
             )
             .reset_index()
-            .sort_values("Silph", ascending=False)
+            .sort_values("Silph", ascending=True)
         )[["name", "Silph", "SING"]]
+
+        share_assignment_results["Speedup"] = share_assignment_results["Silph"] / share_assignment_results["SING"]
 
         share_assignment_results.to_latex("share_assignment.tex", index=False)
 
