@@ -208,12 +208,12 @@ for c_file_path, c_file_hash in tqdm(list(zip(c_file_paths, c_file_hashes))):
     results += [{
         "c_file_path": c_file_path,
         "shahash": c_file_hash,
-        "mode": "sing",
+        "mode": "SING",
         "runtime": cost_sing,
     }, {
         "c_file_path": c_file_path,
         "shahash": c_file_hash,
-        "mode": "silph",
+        "mode": "Silph",
         "runtime": cost_silph,
     }]
 
