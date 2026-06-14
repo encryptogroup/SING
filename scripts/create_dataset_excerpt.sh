@@ -2,7 +2,7 @@
 
 set -e
 
-# usage: bash find_hashes.sh [hashes.txt]
+# usage: bash create_dataset_hashes.sh [hashes.txt]
 
 OUTPUT_C=dataset-excerpt-c
 OUTPUT=dataset-excerpt
