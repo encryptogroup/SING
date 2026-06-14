@@ -38,7 +38,7 @@ std::unordered_map<std::string, std::string> get_bytecode_paths(std::string path
     auto path_list = split(path, "/");
     auto dirname = path_list[path_list.size() - 1];
     for (const auto & entry : std::filesystem::directory_iterator(path)) {
-        std::string file_path{entry.path().u8string()};
+        std::string file_path{entry.path().string()};
         if (file_path.find("share_map.txt") != std::string::npos) {
             continue;
         }
@@ -62,7 +62,7 @@ std::unordered_map<std::string, std::string> get_bytecode_paths(std::string path
 std::string get_const_path(std::string path) {
     std::unordered_map<std::string, std::string> map;
     for (const auto & entry : std::filesystem::directory_iterator(path)) {
-        std::string file_path{entry.path().u8string()};
+        std::string file_path{entry.path().string()};
         if (file_path.find("_const.txt") != std::string::npos) {
           return file_path;
         }
