@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM debian:13
 
 RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get update -qy && apt-get install -y \
 curl \
