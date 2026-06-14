@@ -26,9 +26,9 @@ def process_comm(raw):
 
 
 def process_time(raw):
-    if raw in ["timeout", "error"]:
+    if raw in ["", "timeout", "error"]:
         return None
-    if raw.endswith("ms"):
+    elif raw.endswith("ms"):
         return float(raw[:-2])
     elif raw.endswith("s"):
         return float(raw[:-1]) * 1000
