@@ -56,6 +56,18 @@ parser.add_argument(
     default="share_assignment.csv",
     help="Output CSV file path",
 )
+parser.add_argument(
+    "--silph-cost-model",
+    type=str,
+    default="empirical",
+    help="Silph cost model to use",
+)
+parser.add_argument(
+    "--silph-selection-scheme",
+    type=str,
+    default="smart_glp",
+    help="Silph selection scheme to use",
+)
 
 args = parser.parse_args()
 
@@ -139,9 +151,6 @@ def run_sing(circuit_dir):
 
 
 def run(c_file_path):
-    cost_model = "empirical"
-    selection_scheme = "smart_glp"
-
     cost_sing = None
     cost = None
     costs = []
@@ -156,8 +165,8 @@ def run(c_file_path):
             command = [
                 args.binary,
                 c_file_path,
-                cost_model,
-                selection_scheme,
+                args.silph_cost_model,
+                args.silph_selection_scheme,
                 result_dir,
             ]
 
