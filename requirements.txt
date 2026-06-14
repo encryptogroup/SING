@@ -1,0 +1,12 @@
+torcheval
+torchmetrics
+torch_geometric
+tqdm
+line_profiler
+black
+tabulate
+wandb
+pandas
+plotly
+kaleido
+dash

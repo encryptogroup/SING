@@ -1,0 +1,10 @@
+name,path,shahash
+CryptoNets,../dataset_c/circ/benchmarks/cryptonets/cryptonets.c,0b74b86418cf75948d8a297731f93eccae8cd5e6c4315d060100119d089eda71
+GCD,../dataset_c/circ/benchmarks/gcd/gcd.c,f7b62dee03883927a45e984c73f5dcaf04d351316697bcf68b4382f04f1abcc2
+MiniONN,../dataset_c/circ/benchmarks/mnist/mnist.c,858cd57361b3b76b9b44f7841d49d13d78477a54ab28fa1949eb0387946f6065
+Gauss,../dataset_c/circ/benchmarks/gauss/2pc_gauss_inline.c,a6852e078239a6f332f44560e3ba1ea6cb9efb6c0f8c446c4bba6d7c53a298fc
+k-means,../dataset_c/circ/benchmarks/kmeans/2pc_kmeans_.c,06ba413c6cab2c4ec60d31a968359f3f1bfc05e8eb41539b4ccfe7175ba3d0e7
+Biomatch,../dataset_c/circ/benchmarks/biomatch/biomatch_16384.c,eb26322b9cb6fa6e15573fabdea396118524dfb922b2df709f424e2e8293f617
+Histogram,../dataset_c/circ/benchmarks/histogram/histogram.c,33c8af864f4dc5ab1e9a862ba248b95b7c5a25465496331db97a79781e112b97
+DB Merge,../dataset_c/circ/benchmarks/db/db_merge.c,5f52257ad86810c00e91d44f1dfc81c4bf4c8e78ec552fa7eb5368b2fd4a3497
+DB Join,../dataset_c/circ/benchmarks/db/db_join.c,b4b1845a9a8d711ec90cf0fc650d35bc7b97adf85cac22d921f2947dc0b89cff

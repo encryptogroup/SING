@@ -1,0 +1,19 @@
+You are an expert programmer. You are tasked with writing a C program implementing an insurance cost calculation algorithm.
+
+- The whole functionality is provided in a single function called main. Do not write any other functions.
+- Do not #include any headers.
+- The function returns a single integer.
+- There should be 1 or 2 function parameters. Parameters are read-only. Do not annotate the parameters with `const`. Annotate the first parameter with `__attribute__((private(0)))` and the second one with `__attribute__((private(1)))`. Examples:
+
+```c
+int main(__attribute__((private(0))) int a[20], __attribute__((private(1))) int b[20])
+```
+
+```c
+int main(__attribute__((private(0))) int a[100], __attribute__((private(1))) int b)
+```
+
+- The code should not include pointers. Instead use fixed-size arrays. Do not use 2d or 3d arrays. If arrays are provided as function parameters, they should be of the form e.g. `int arr[20]` without an additional `size` parameter.
+- Additionally forbidden are gotos, standard library calls, IO, floating point values, or while/do-while loops.
+- Bounded for loops and arrays are allowed. For loop conditions should only be of the form `i < N` where `N` is a number literal.
+- Provide only the code, and a source URL where this code originated from/inspired this code (if possible).

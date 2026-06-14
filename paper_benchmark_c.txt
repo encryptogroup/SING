@@ -1,0 +1,9 @@
+../dataset_c/circ/benchmarks/cryptonets/cryptonets.c
+../dataset_c/circ/benchmarks/gcd/gcd.c
+../dataset_c/circ/benchmarks/mnist/mnist.c
+../dataset_c/circ/benchmarks/gauss/2pc_gauss_inline.c
+../dataset_c/circ/benchmarks/kmeans/2pc_kmeans_.c
+../dataset_c/circ/benchmarks/biomatch/biomatch_16384.c
+../dataset_c/circ/benchmarks/histogram/histogram.c
+../dataset_c/circ/benchmarks/db/db_merge.c
+../dataset_c/circ/benchmarks/db/db_join.c
