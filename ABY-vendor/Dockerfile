@@ -7,4 +7,4 @@ COPY . aby
 
 RUN cd aby && mkdir build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Release -DABY_BUILD_EXE=On && make
 
-ENV PATH="$PATH:/aby/build/bin"
+ENTRYPOINT ["/aby/entrypoint.sh"]
