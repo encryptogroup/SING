@@ -143,7 +143,7 @@ if args.predicted_cost:
     wandb_config["cost_model_uuid"] = cost_prediction_checkpoint["uuid"]
 
 run = wandb.init(
-    entity=os.environ["WANDB_ENTITY"],
+    entity=os.environ.get("WANDB_ENTITY", ""),
     project="sing",
     name=args.name,
     config=wandb_config,

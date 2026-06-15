@@ -185,7 +185,7 @@ if args.mode == "combined":
     wandb_config["invalid_cost"] = args.invalid_cost
 
 run = wandb.init(
-    entity=os.environ["WANDB_ENTITY"],
+    entity=os.environ.get("WANDB_ENTITY", ""),
     project="sing",
     name=args.name,
     config=wandb_config,
