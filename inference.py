@@ -53,7 +53,9 @@ args = parser.parse_args()
 
 num_classes = len(share_types)
 
-share_assignment_checkpoint = torch.load(args.checkpoint)
+device = torch.device("cpu")
+
+share_assignment_checkpoint = torch.load(args.checkpoint, map_location=device)
 
 model = ShareAssignmentModel()
 model.load_state_dict(share_assignment_checkpoint["state_dict"])
