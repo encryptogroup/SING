@@ -38,8 +38,6 @@ private_tmp_dir=$(mktemp -p "${TMP_DIR}" -d)
 pushd "${private_tmp_dir}"
 
 RUST_BACKTRACE=1 \
-    RUSTFLAGS="-L $HOME/local/lib" \
-    LD_LIBRARY_PATH=$HOME/local/lib \
     CARGO_MANIFEST_DIR=$CARGO_MANIFEST_DIR \
     $CARGO_MANIFEST_DIR/target/release/examples/circ \
     --parties 2 \
