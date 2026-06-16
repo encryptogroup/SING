@@ -27,3 +27,5 @@ RUN mkdir -p scripts/aby_tests/tests
 RUN python3 driver.py -c
 RUN python3 driver.py -i
 RUN python3 driver.py -b
+
+ENTRYPOINT ["/circ/entrypoint.sh"]
