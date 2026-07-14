@@ -8,7 +8,7 @@ SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 BASE="$SCRIPTPATH/.."
 
 CARGO_MANIFEST_DIR=$BASE/silph
-TMP_DIR=$BASE/tmp
+TMP_DIR=/tmp
 
 c_file_path=$(realpath $1)
 cost_model=$2
