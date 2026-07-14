@@ -25,7 +25,7 @@ if [ -d "${result_dir}/${hash}" ] ; then
 fi
 
 # already not successfully tried
-if cut -d' ' -f1 < "${failed_log}" | grep -q "${hash}" ; then
+if [ -f "${failed_log}" ] && cut -d' ' -f1 < "${failed_log}" | grep -q "${hash}" ; then
     exit 0
 fi
 
