@@ -21,6 +21,12 @@ from sing import read_failed_log, parse_silph, ShareAssignmentModel
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
+    "--checkpoint",
+    type=str,
+    default="checkpoint.pt",
+    help="Path to model checkpoint",
+)
+parser.add_argument(
     "--dataset-dir",
     type=str,
     default="dataset/raw",
@@ -71,7 +77,7 @@ parser.add_argument(
 
 args = parser.parse_args()
 
-share_assignment_checkpoint = torch.load("checkpoint.pt")
+share_assignment_checkpoint = torch.load(args.checkpoint)
 
 model = ShareAssignmentModel()
 model.load_state_dict(share_assignment_checkpoint["state_dict"])
