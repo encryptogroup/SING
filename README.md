@@ -343,3 +343,30 @@ ablation on model performance.
 
 All plots and tables in our paper can be reproduced from measured data
 using the `benchmark-results/plot.py` script.
+
+```bash
+cd benchmark-results
+
+# generate plots with plotly
+python plot.py --format pdf
+
+# generate LaTeX tables
+python plot.py --format latex
+```
+
+`plot.py` expects benchmark results to be in specific locations in the
+`benchmark-results` subdirectory:
+
+- `share-assignment/smart_glp.csv`: Share assignment benchmarks output
+  from `benchmark_share_assignment.py`
+- `mpc/silph_LAN.csv`, `mpc/<UUID>_LAN.csv`: MPC runtimes and
+  communication amounts measured in the LAN network setting which are
+  output by `benchmark_mpc.py`
+- `mpc/silph_WAN.csv`, `mpc/<UUID>_WAN.csv`: like above, but MPC
+  benchmark results from the WAN network setting
+
+To plot your results, replace the respective files by the outputs of
+`benchmark_mpc.py` or `benchmark_share_assignment.py`. Note that MPC
+benchmarks for Silph and SING are output in a combined CSV file. The
+Silph benchmark numbers need to be manually extracted to the
+`mpc/silph_LAN.csv` and `mpc/silph_WAN.csv` files respectively.
