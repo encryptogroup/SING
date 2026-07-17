@@ -323,6 +323,22 @@ as a user with `sudo` ability, i.e., the user needs to be in the
 Using the `--checkpoint <PATH>` flag, the evaluation can be performed
 on a specific model checkpoint.
 
+## Ablation
+
+To verify that models consider both the circuit structure and
+operation types when predicting costs or assigning shares, we have
+included options to remove the respective information during the
+training process. Both `train.py` and `train_cost_prediction.py`
+support following ablations:
+
+- `--delete-edges` removes all edges during training
+- `--zero-features` zeroes all node features, effectively removing
+  information about the node operation type for each node
+
+After training with ablation, run `eval.py` or
+`eval_cost_prediction.py` respectively to measure the impact of the
+ablation on model performance.
+
 ## Reproducing Plots and Tables
 
 All plots and tables in our paper can be reproduced from measured data
