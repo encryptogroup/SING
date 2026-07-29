@@ -216,7 +216,7 @@ def run_epoch(epoch):
         edge_index = batch.edge_index
 
         if args.delete_edges:
-            edge_index = torch.tensor([[], []], dtype=torch.long)
+            edge_index = torch.tensor([[], []], dtype=torch.long).to(device)
 
         if args.zero_features:
             x[:] = 0
