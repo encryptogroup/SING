@@ -296,11 +296,11 @@ plot_share_assignment("share-assignment/smart_glp.csv")
 lan_files = [
     "mpc/silph_LAN.csv",
     # SING 1: supervised
-    "mpc/a3a46d07-dbfb-4db4-a602-c6a0d107a6b0_LAN.csv",
+    "mpc/51179755-cfb8-4aa0-ba6f-9bf7ff6383c8_LAN.csv",
     # SING 2: semi-supervised with C_Silph
-    "mpc/7cd769bf-53bf-443f-963f-c289ccc17cbd_LAN.csv",
+    "mpc/00cc117b-a0eb-46d1-b8d8-3568c6b1a010_LAN.csv",
     # SING 3: semi-supervised with C_runtime_WAN
-    "mpc/0ab0a50c-5ab2-4fa3-9d7a-fbfd9715007d_LAN.csv",
+    "mpc/3536f47c-4c1d-4004-bb0a-d2b227d134bb_LAN.csv",
 ]
 
 wan_files = list(map(lambda x: x.replace("LAN", "WAN"), lan_files))
@@ -315,6 +315,6 @@ plot_combined(
     [
         "mpc/silph_LAN.csv",
         # SING 3: semi-supervised with C_runtime_WAN
-        "mpc/0ab0a50c-5ab2-4fa3-9d7a-fbfd9715007d_LAN.csv",
+        "mpc/3536f47c-4c1d-4004-bb0a-d2b227d134bb_LAN.csv",
     ],
 )

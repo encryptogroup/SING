@@ -2,9 +2,9 @@
 
 set -e
 
-SING1=pretrained/share_assignment_supervised.pt
-SING2=pretrained/share_assignment_semi_supervised_silph.pt
-SING3=pretrained/share_assignment_semi_supervised_runtime.pt
+SING1=pretrained/clean/share_assignment_supervised.pt
+SING2=pretrained/clean/share_assignment_semi_supervised_silph.pt
+SING3=pretrained/clean/share_assignment_semi_supervised_runtime.pt
 
 checkpoints=${1:-$SING1,$SING2,$SING3}
 network_settings=${2:-LAN,WAN}
